@@ -20,6 +20,7 @@ CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_ezpro_mrkaio-m68s=y
 CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_ezpro_mrkaio-m68s-plus=y
 CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_dg_tn3568=y
 CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_yijiahe_jm10=y
+CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_xunlong_orangepi-5-plus=y
 CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_cyber3588_aib=y
 CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_nsy_g68-plus=y
 CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_nsy_g16-plus=y
@@ -27,6 +28,13 @@ CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_bdy_g18-pro=y
 
 CONFIG_PACKAGE_brcmfmac-firmware-panther-x2=y
 CONFIG_PACKAGE_brcmfmac-firmware-jp-tvbox=y
+CONFIG_PACKAGE_rkwifi-firmware=y
+CONFIG_PACKAGE_rkwifi-firmware-ap6255=y
+CONFIG_PACKAGE_rkwifi-firmware-ap6256=y
+CONFIG_PACKAGE_rkwifi-firmware-ap6275p=y
+CONFIG_PACKAGE_rkwifi-firmware-ap6275s=y
+CONFIG_PACKAGE_rkwifi-firmware-ap6398s=y
+CONFIG_PACKAGE_kmod-rkwifi-bcmdhd-pcie=y
 CONFIG_PACKAGE_kmod-nft-tproxy=y
 
 CONFIG_PACKAGE_kmod-usb-printer=y

@@ -88,7 +88,7 @@ sed -i "s/192.168.100.1/192.168.200.1/g" package/base-files/files/bin/config_gen
 sed -i "s/192.168.1.1/192.168.200.1/g" package/base-files/files/bin/config_generate
 
 
-# 加入nsy_g68-plus初始化网络配置脚本
+# 加入初始化网络配置脚本
 cp -f $GITHUB_WORKSPACE/configfiles/swconfig_install package/base-files/files/etc/init.d/swconfig_install
 chmod 755 package/base-files/files/etc/init.d/swconfig_install
 
