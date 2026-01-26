@@ -1,6 +1,8 @@
 #!/bin/sh
 
 if [ -e /sys/class/net/ra0 ]; then
+    wifi down
+    sleep 3
     wifi up
     sleep 5
     echo f > /sys/class/net/ra0/queues/rx-0/rps_cpus
