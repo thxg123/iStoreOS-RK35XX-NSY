@@ -1,0 +1,30 @@
+# Put your custom commands here that should be executed once
+# the system init finished. By default this file does nothing.
+
+# 以下代码是初始化nsy-g68-plus机型闭源WiFi功能的，不可删除否则WiFi不可用。
+board_name() {
+    [ -e /tmp/sysinfo/board_name ] && cat /tmp/sysinfo/board_name || echo "generic"
+}
+
+mtk_wifi() {
+    local board=$(board_name)
+    case "$board" in
+        nsy,g68-plus)
+            if [ -e /sys/class/net/ra0/queues/rx-0/rps_cpus ]; then
+                wifi up
+                sleep 5
+                echo f > /sys/class/net/ra0/queues/rx-0/rps_cpus
+                [ -e /sys/class/net/rax0/queues/rx-0/rps_cpus ] && echo f > /sys/class/net/rax0/queues/rx-0/rps_cpus
+                [ -e /proc/sys/net/core/netdev_budget ] && echo 10000 > /proc/sys/net/core/netdev_budget
+            fi
+            ;;
+        *)
+            return 1
+            ;;
+    esac
+}
+
+# 初始化WiFi功能
+mtk_wifi
+
+exit 0

@@ -1,11 +1,11 @@
 /dts-v1/;
 
 / {
-	compatible = "nsy,g16-plus", "rockchip,rk3568";
+	compatible = "bdy,g18-pro", "rockchip,rk3568";
 	interrupt-parent = <0x01>;
 	#address-cells = <0x02>;
 	#size-cells = <0x02>;
-	model = "NSY-G16 AX3000 Router";
+	model = "BDY-G18 AX3000 Router";
 
 	ddr3-params {
 		version = <0x100>;
@@ -1231,7 +1231,6 @@
 			pinctrl-1 = <0x36 0x37>;
 			pinctrl-2 = <0x38 0x39>;
 			pinctrl-3 = <0x38 0x3a>;
-			rockchip,system-power-controller;
 			wakeup-source;
 			#clock-cells = <0x01>;
 			clock-output-names = "rk808-clkout1\0rk808-clkout2";
