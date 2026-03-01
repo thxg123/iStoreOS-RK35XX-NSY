@@ -1231,6 +1231,7 @@
 			pinctrl-1 = <0x36 0x37>;
 			pinctrl-2 = <0x38 0x39>;
 			pinctrl-3 = <0x38 0x3a>;
+			rockchip,system-power-controller;
 			wakeup-source;
 			#clock-cells = <0x01>;
 			clock-output-names = "rk808-clkout1\0rk808-clkout2";
